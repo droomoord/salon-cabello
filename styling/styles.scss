@@ -1,0 +1,197 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 1000px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 100px;
+  transform-style: preserve-3d;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  z-index: 2;
+  .items {
+    opacity: 0;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      width: 100px;
+      cursor: pointer;
+    }
+    button {
+      background: none;
+      color: white;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      height: 100%;
+      border: 10px 0 solid #000000;
+    }
+    button:hover {
+      color: #e6ffbd;
+    }
+    .active {
+      border-bottom: 10px solid #febce5;
+      border-top: 10px solid black;
+      // box-sizing: content-box !important;
+    }
+  }
+}
+
+.parallax {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* first screen */
+
+.parallax:nth-of-type(1) {
+  background-image: url("/assets/images/allyson-carter-5P_DABYHK1A-unsplash.jpg");
+  transform: translateZ(-100px) scale(2);
+  z-index: 0;
+  background-position: right;
+  background-size: cover;
+
+  .shadow {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .content-wrapper {
+    width: 100%;
+    height: 100%;
+    .welcome {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: -100px;
+      left: 0;
+      color: #ffffff;
+      font-size: 0.8rem;
+      .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 250px;
+        }
+        h1 {
+          position: relative;
+          bottom: 100px;
+          font-family: "Mansalva", cursive;
+          font-size: 4rem;
+          color: white;
+          // mix-blend-mode: saturation;
+        }
+      }
+    }
+  }
+}
+
+/* second screen */
+
+.parallax:nth-of-type(2) {
+  background-color: #e6ffbd;
+  z-index: 10;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* third screen */
+
+.parallax:nth-of-type(3) {
+  z-index: -5;
+  background-image: url("/assets/images/adam-winger-KVVjmb3IIL8-unsplash.jpg");
+  transform: translateZ(-200px) scale(3);
+  // z-index: -10;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* fourth screen */
+.parallax:nth-of-type(4) {
+  background-color: #e6ffbd;
+  // transform: translateZ(-200px) scale(3);
+  z-index: 0;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax:nth-of-type(5) {
+  // z-index: 30;
+  background-attachment: fixed;
+  background-image: url("/assets/images/nathan-fertig-5EIW3DDX6dw-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
