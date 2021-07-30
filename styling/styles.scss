@@ -71,7 +71,7 @@ body {
 /* first screen */
 
 .parallax:nth-of-type(1) {
-  background-image: url("assets/images/allyson-carter-5P_DABYHK1A-unsplash.jpg");
+  background-image: url("../assets/images/allyson-carter-5P_DABYHK1A-unsplash.jpg");
   transform: translateZ(-100px) scale(2);
   z-index: 0;
   background-position: right;
@@ -135,7 +135,7 @@ body {
 
 .parallax:nth-of-type(3) {
   z-index: -5;
-  background-image: url("assets/images/adam-winger-KVVjmb3IIL8-unsplash.jpg");
+  background-image: url("../assets/images/adam-winger-KVVjmb3IIL8-unsplash.jpg");
   transform: translateZ(-200px) scale(3);
   // z-index: -10;
   background-position: center;
@@ -160,7 +160,7 @@ body {
 .parallax:nth-of-type(5) {
   // z-index: 30;
   background-attachment: fixed;
-  background-image: url("assets/images/nathan-fertig-5EIW3DDX6dw-unsplash.jpg");
+  background-image: url("../assets/images/nathan-fertig-5EIW3DDX6dw-unsplash.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
