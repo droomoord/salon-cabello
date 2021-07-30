@@ -12,7 +12,7 @@ wrapper.addEventListener("scroll", (e) => {
   console.log(scrollPos);
 
   // shadow
-  shadow.style.backgroundColor = `rgba(0, 0, 0, ${0.2 + scrollPos / 1200})`;
+  shadow.style.backgroundColor = `rgba(0, 0, 0, ${0.2 + scrollPos / 500})`;
 
   // moving hands
   parallaxes[2].setAttribute(
@@ -21,13 +21,10 @@ wrapper.addEventListener("scroll", (e) => {
   );
 
   //   navbar appear
-  if (scrollPos > 790) {
-    navbar.style.visibility = "visible";
-    navbarItems.classList.remove("fade-out");
-    navbarItems.classList.add("fade-in");
+  if (scrollPos < 790) {
+    navbar.style.opacity = 0;
   } else {
-    navbar.style.visibility = "hidden";
-    navbarItems.classList.remove("fade-in");
+    navbar.style.opacity = 1;
   }
 
   //   navbar items active class
@@ -77,3 +74,5 @@ navbarButtons.forEach((button) => {
     }
   });
 });
+
+wrapper.scrollTop = 1000;
