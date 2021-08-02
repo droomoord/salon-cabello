@@ -12,7 +12,7 @@ wrapper.addEventListener("scroll", (e) => {
   console.log(scrollPos);
 
   // shadow
-  shadow.style.backgroundColor = `rgba(0, 0, 0, ${0.2 + scrollPos / 500})`;
+  shadow.style.backgroundColor = `rgba(0, 0, 0, ${0.2 + scrollPos / 900})`;
 
   // moving hands
   parallaxes[2].setAttribute(
@@ -21,7 +21,7 @@ wrapper.addEventListener("scroll", (e) => {
   );
 
   //   navbar appear
-  if (scrollPos < 790) {
+  if (scrollPos < 700) {
     navbar.style.opacity = 0;
   } else {
     navbar.style.opacity = 1;
@@ -75,4 +75,4 @@ navbarButtons.forEach((button) => {
   });
 });
 
-wrapper.scrollTop = 1000;
+// wrapper.scrollTop = 4000;
