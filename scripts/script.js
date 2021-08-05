@@ -9,7 +9,6 @@ const navbarButtons = navbarItems.querySelectorAll("button");
 
 wrapper.addEventListener("scroll", (e) => {
   const scrollPos = e.target.scrollTop;
-  console.log(scrollPos);
 
   // shadow
   shadow.style.backgroundColor = `rgba(0, 0, 0, ${0.2 + scrollPos / 900})`;
@@ -57,16 +56,16 @@ navbarButtons.forEach((button) => {
     console.log(e.target.innerText);
     switch (e.target.innerText) {
       case "Team Cabello":
-        wrapper.scrollTop = 1000;
+        goTo(1000);
         break;
       case "Book":
-        wrapper.scrollTop = 2000;
+        goTo(2000);
         break;
       case "Prices":
-        wrapper.scrollTop = 3000;
+        goTo(3000);
         break;
       case "Contact":
-        wrapper.scrollTop = 4000;
+        goTo(4000);
         break;
 
       default:
@@ -75,4 +74,11 @@ navbarButtons.forEach((button) => {
   });
 });
 
-// wrapper.scrollTop = 4000;
+function goTo(scrollPos) {
+  wrapper.scrollTop = scrollPos;
+}
+
+function submit(e) {
+  e.preventDefault();
+  console.log("submit");
+}

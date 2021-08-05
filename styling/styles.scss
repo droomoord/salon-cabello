@@ -9,6 +9,11 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  // text-decoration: none;
+  color: #ff41b6;
+}
+
 .wrapper {
   width: 100vw;
   height: 1000px;
@@ -70,6 +75,8 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgb(94, 94, 94);
 }
 
 /* first screen */
@@ -220,7 +227,7 @@ body {
         filter: grayscale(100%);
 
         box-shadow: 5px 5px 5px rgb(0, 0, 0);
-        cursor: pointer;
+        // cursor: pointer;
         svg {
           width: 200px;
           position: absolute;
@@ -244,16 +251,13 @@ body {
           pointer-events: none;
         }
       }
-      .avatar:hover {
-        // filter: grayscale(0%);
-        // filter: grayscale(100%) sepia(100%);
-      }
-      .avatar:hover .text {
-        opacity: 1;
-      }
-      .avatar:hover svg {
-        opacity: 1;
-      }
+
+      // .avatar:hover .text {
+      //   opacity: 1;
+      // }
+      // .avatar:hover svg {
+      //   opacity: 1;
+      // }
 
       .avatar:nth-of-type(1) {
         background-image: url("../assets/images/adam-winger-fI-TKWjKYls-unsplash.jpg");
@@ -288,12 +292,68 @@ body {
   z-index: 1;
   background-image: url("../assets/images/adam-winger-KVVjmb3IIL8-unsplash.jpg");
   transform: translateZ(-100px) scale(2);
-
-  background-position: center;
+  background-position-y: 30px;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  .box {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    // align-items: center;
+    width: 100%;
+    height: 100%;
+    .booking {
+      padding: 30px;
+      max-width: 60%;
+      height: fit-content;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+        0 1px 12px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      background-color: #e6ffbdcb;
+      h2 {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        text-decoration: underline;
+      }
+      small {
+      }
+
+      .flex-row {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        .flex-col {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          input {
+            font-family: inherit;
+            font-size: inherit;
+            width: 20rem;
+          }
+        }
+        button {
+          font-family: inherit;
+          font-size: inherit;
+          width: 6rem;
+          height: 3rem;
+          background-color: #ffbde6;
+          border: 1px solid black;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: 0.2s background-color;
+        }
+        button:hover {
+          background-color: darken(#ffbde6, 5);
+        }
+      }
+    }
+  }
 }
 
 /* fourth screen */

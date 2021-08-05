@@ -10,6 +10,10 @@ body {
           box-sizing: border-box;
 }
 
+a {
+  color: #ff41b6;
+}
+
 .wrapper {
   width: 100vw;
   height: 1000px;
@@ -82,6 +86,8 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid #5e5e5e;
 }
 
 /* first screen */
@@ -253,7 +259,6 @@ body {
           filter: grayscale(100%);
   -webkit-box-shadow: 5px 5px 5px black;
           box-shadow: 5px 5px 5px black;
-  cursor: pointer;
 }
 
 .parallax:nth-of-type(2) .content-wrapper .avatars .avatar svg {
@@ -278,14 +283,6 @@ body {
   text-align: center;
   left: 80px;
   pointer-events: none;
-}
-
-.parallax:nth-of-type(2) .content-wrapper .avatars .avatar:hover .text {
-  opacity: 1;
-}
-
-.parallax:nth-of-type(2) .content-wrapper .avatars .avatar:hover svg {
-  opacity: 1;
 }
 
 .parallax:nth-of-type(2) .content-wrapper .avatars .avatar:nth-of-type(1) {
@@ -319,17 +316,92 @@ body {
   background-image: url("../assets/images/adam-winger-KVVjmb3IIL8-unsplash.jpg");
   -webkit-transform: translateZ(-100px) scale(2);
           transform: translateZ(-100px) scale(2);
-  background-position: center;
+  background-position-y: 30px;
   background-size: cover;
+}
+
+.parallax:nth-of-type(3) .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 200px;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax:nth-of-type(3) .box .booking {
+  padding: 30px;
+  max-width: 60%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px 12px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px 12px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #e6ffbdcb;
+}
+
+.parallax:nth-of-type(3) .box .booking h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.parallax:nth-of-type(3) .box .booking .flex-row {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 40px;
+}
+
+.parallax:nth-of-type(3) .box .booking .flex-row .flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.parallax:nth-of-type(3) .box .booking .flex-row .flex-col input {
+  font-family: inherit;
+  font-size: inherit;
+  width: 20rem;
+}
+
+.parallax:nth-of-type(3) .box .booking .flex-row button {
+  font-family: inherit;
+  font-size: inherit;
+  width: 6rem;
+  height: 3rem;
+  background-color: #ffbde6;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: 0.2s background-color;
+  transition: 0.2s background-color;
+}
+
+.parallax:nth-of-type(3) .box .booking .flex-row button:hover {
+  background-color: #ffa4dc;
 }
 
 /* fourth screen */
